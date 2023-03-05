@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_auth_animation/constants.dart';
 import 'package:flutter_auth_animation/widgets/login_form.dart';
 import 'package:flutter_auth_animation/widgets/sign_up_form.dart';
+import 'package:flutter_auth_animation/widgets/socal_buttons.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 class AuthScreen extends StatefulWidget {
@@ -84,31 +85,29 @@ class _AuthScreenState extends State<AuthScreen>
                       _isShowSignUp ? -_size.width * 0.06 : _size.width * 0.06,
                   child: CircleAvatar(
                     radius: 25,
-                    backgroundColor: Colors.white60,
+                    backgroundColor: Colors.black,
                     child: AnimatedSwitcher(
                       duration: defaultDuration,
                       child: _isShowSignUp
                           ? SvgPicture.asset(
-                              "C:\Users\ann mariya\OneDrive\Desktop\flutterapp\flutter_auth_animation-Starting-Project\flutter_auth_animation-Starting-Project\assets\falling-man-png-png-image-137503.png",
+                              "flutter_auth_animation-Starting-Project\assets\fall-elogo.png",
                               color: signup_bg,
                             )
                           : SvgPicture.asset(
-                              "C:\Users\ann mariya\OneDrive\Desktop\flutterapp\flutter_auth_animation-Starting-Project\flutter_auth_animation-Starting-Project\assets\falling-man-png-png-image-137503.png",
+                              "flutter_auth_animation-Starting-Project\assets\fall-elogo.png",
                               color: login_bg,
                             ),
                     ),
                   ),
                 ),
-
-                //AnimatedPositioned(
-                // duration: defaultDuration,
-                //width: _size.width,
-                //bottom: _size.height * 0.01,
-                //right:  _isShowSignUp
-                //? -_size.width * 0.06
-                //: _size.width * 0.06,
-                //child: SocialButtns(),
-                //),
+                AnimatedPositioned(
+                  duration: defaultDuration,
+                  width: _size.width,
+                  bottom: _size.height * 0.01,
+                  right:
+                      _isShowSignUp ? -_size.width * 0.06 : _size.width * 0.06,
+                  child: SocalButtns(),
+                ),
                 AnimatedPositioned(
                   duration: defaultDuration,
                   bottom: _isShowSignUp
@@ -147,7 +146,6 @@ class _AuthScreenState extends State<AuthScreen>
                     ),
                   ),
                 ),
-
                 AnimatedPositioned(
                   duration: defaultDuration,
                   bottom: !_isShowSignUp
