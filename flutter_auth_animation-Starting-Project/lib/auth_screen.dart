@@ -61,7 +61,7 @@ class _AuthScreenState extends State<AuthScreen>
                   duration: defaultDuration,
                   width: _size.width * 0.88,
                   height: _size.height,
-                  left: _isShowSignUp ? _size.width * 0.76 : 0,
+                  left: _isShowSignUp ? -_size.width * 0.76 : 0,
                   child: Container(
                     color: login_bg,
                     child: LoginForm(),
@@ -85,16 +85,16 @@ class _AuthScreenState extends State<AuthScreen>
                       _isShowSignUp ? -_size.width * 0.06 : _size.width * 0.06,
                   child: CircleAvatar(
                     radius: 25,
-                    backgroundColor: Colors.black,
+                    //backgroundColor: Colors.white60,
                     child: AnimatedSwitcher(
                       duration: defaultDuration,
                       child: _isShowSignUp
                           ? SvgPicture.asset(
-                              "flutter_auth_animation-Starting-Project\assets\fall-elogo.png",
+                              "flutter_auth_animation-Starting-Project\assets\fall-elogo.svg",
                               color: signup_bg,
                             )
                           : SvgPicture.asset(
-                              "flutter_auth_animation-Starting-Project\assets\fall-elogo.png",
+                              "flutter_auth_animation-Starting-Project\assets\fall-elogo.svg",
                               color: login_bg,
                             ),
                     ),

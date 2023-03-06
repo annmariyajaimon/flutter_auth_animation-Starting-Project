@@ -110,19 +110,19 @@ class SettingsOnePage extends StatelessWidget {
               ),
             ),
           ),
-          Positioned(
-            bottom: 00,
-            left: 00,
-            child: IconButton(
-              icon: Icon(
-                FontAwesomeIcons.poweroff,
-                color: Colors.white,
-              ),
-              onPressed: () {
-                //log out
-              },
-            ),
-          )
+          // Positioned(
+          //  bottom: 00,
+          //left: 00,
+          // child: IconButton(
+          // icon: Icon(
+          // FontAwesomeIcons.poweroff,
+          //color: Colors.white,
+          // ),
+          // onPressed: () {
+          //log out
+          // },
+          // ),
+          //)
         ],
       ),
     );
